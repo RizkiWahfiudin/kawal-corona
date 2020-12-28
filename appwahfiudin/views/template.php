@@ -5,10 +5,10 @@
 	<head>
 
 		<!-- META DATA -->
-		<title><?php echo $title; ?> | Kawal Corona</title>
+		<title>Kawal Corona | Rizki Wahfiudin</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  		<link rel="shortcut icon" href="<?php echo base_url('assets/'); ?>uploads/icon01.png">
+  		<link rel="shortcut icon" href="https://rizkiwahfiudin.my.id/blog/wp-content/uploads/2020/11/logo.jpg">
 		<!-- BOOTSTRAP CSS -->
 		<link href="<?php echo base_url('assets/'); ?>data/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
