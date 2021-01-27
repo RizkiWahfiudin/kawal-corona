@@ -1,4 +1,3 @@
-<!--app-content open-->
 <div class="container app-content">
 	<div class="">
 		<div class="jumbotron">
@@ -7,9 +6,7 @@
 				<p class="lead m-0 text-center">Live Data Indonesia</p>
 			</div>
 		</div>
-		<!-- PAGE-HEADER END -->
 
-		<!-- ROW-1 OPEN -->
 		<div class="row">
 			<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
 				<div class="card bg-danger img-card box-primary-shadow">
@@ -24,7 +21,7 @@
 						</div>
 					</div>
 				</div>
-			</div><!-- COL END -->
+			</div>
 			<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
 				<div class="card bg-success img-card box-secondary-shadow">
 					<div class="card-body">
@@ -38,7 +35,7 @@
 						</div>
 					</div>
 				</div>
-			</div><!-- COL END -->
+			</div>
 			<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
 				<div class="card  bg-secondary img-card box-success-shadow">
 					<div class="card-body">
@@ -52,12 +49,11 @@
 						</div>
 					</div>
 				</div>
-			</div><!-- COL END -->
+			</div>
 		</div>
-		<!-- ROW-1 CLOSED -->
+
 		<h6><center>Update Terakhir : <?php echo $last_update; ?></center></h6>
 
-		<!-- ROW-3 OPEN -->
 		<div class="row row-cards">
 			<div class="col-sm-12 col-md-12 col-lg-12 col-xl-14">
 				<div class="card">
@@ -74,7 +70,6 @@
 										<th class="atasbro">Positif</th>
 										<th class="atasbro">Sembuh</th>
 										<th class="atasbro">Meninggal</th>
-										
 									</tr>
 								</thead>
 								<tbody>
@@ -92,10 +87,7 @@
 						</div>
 					</div>
 				</div>
-			</div><!-- COL END -->
-		</div>
-		<!-- ROW-3 CLOSED -->
+			</div>
 		</div>
 	</div>
-	<!-- CONTAINER CLOSED -->
 </div>

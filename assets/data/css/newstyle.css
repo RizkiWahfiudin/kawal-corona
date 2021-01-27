@@ -1,9 +1,5 @@
 @charset "UTF-8";
 /**
-* volgh v1.0.0 (https://themeforest.net/user/sprukosoft)
-* Copyright 2019 Spruko Technologies Private Limited
-* Licensed under ThemeForest License
-*
 
 //---------- TABLE OF CONTENTS ----------//
 	* Bootstrap Framework
@@ -73,8 +69,6 @@
 
 /*-------- Components-col css -------*/
 @import url(components-col.css);
-
-
 
 
 *, *::before, *::after {
