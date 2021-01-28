@@ -38,6 +38,14 @@ class Home extends WahfiudinController {
 		$date= date("d-m-Y H:i:s");
 		$lastupdate= explode("-", $date);
 		$d['last_update']= $lastupdate[0].' '.bulan($lastupdate[1]).' '.$lastupdate[2].' WIB';
+		
 		$this->template->covid19('global',$d);
+	}
+	public function hospital() {
+		$d['title']= 'Daftar Rumah Sakit Rujukan';
+		$rumahsakit= file_get_contents('https://dekontaminasi.com/api/id/covid19/hospitals');
+		$d['rumah_sakit']= json_decode($rumahsakit);
+
+		$this->template->covid19('hospital',$d);
 	}
 }

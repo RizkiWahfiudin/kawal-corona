@@ -2,8 +2,8 @@
 	<div class="">
 		<div class="jumbotron">
 			<div class="container">
-				<br><h1 class="display-3 text-center">KAWAL CORONA</h1>
-				<p class="lead m-0 text-center">Live Data Indonesia</p>
+				<br><h1 class="display-3 text-center">KAWAL CORONA | INDONESIA</h1>
+				<center><button type="button" onclick="redirectHospital()" class="btn btn-warning">Daftar Rumah Sakit Rujukan</button></center>
 			</div>
 		</div>
 
@@ -70,6 +70,7 @@
 										<th class="atasbro">Positif</th>
 										<th class="atasbro">Sembuh</th>
 										<th class="atasbro">Meninggal</th>
+										<!-- <th></th> -->
 									</tr>
 								</thead>
 								<tbody>
@@ -80,6 +81,7 @@
 										<td><?php echo number_format($q->attributes->Kasus_Posi); ?></td>
 										<td><?php echo number_format($q->attributes->Kasus_Semb); ?></td>
 										<td><?php echo number_format($q->attributes->Kasus_Meni); ?></td>
+										<!-- <td><button type="button" onclick="" class="btn btn-info" data-toggle="modal" data-target="#detail">Detail</button></td> -->
 									</tr>
 									<?php } ?>
 								</tbody>
@@ -91,3 +93,9 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	function redirectHospital() {
+		window.location = "https://rizkiwahfiudin.my.id/covid19/hospital";
+	}
+</script>

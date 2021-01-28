@@ -2,8 +2,7 @@
 	<div class="">
 		<div class="jumbotron">
 			<div class="container">
-				<br><h1 class="display-3 text-center">KAWAL CORONA</h1>
-				<p class="lead m-0 text-center">Live Data Global</p>
+				<br><h1 class="display-3 text-center">KAWAL CORONA | GLOBAL</h1>
 			</div>
 		</div>
 
