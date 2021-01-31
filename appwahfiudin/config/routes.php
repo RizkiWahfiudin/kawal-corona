@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['global']= 'home/allglobal';
 $route['tentang']= 'home/tentang';
 $route['default_controller'] = 'home';
+$route['news'] = 'home/news';
 $route['hospital'] = 'home/hospital';
 $route['404_override'] = 'notfound';
 $route['translate_uri_dashes'] = FALSE;

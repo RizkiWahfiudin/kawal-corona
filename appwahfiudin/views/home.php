@@ -3,7 +3,8 @@
 		<div class="jumbotron">
 			<div class="container">
 				<br><h1 class="display-3 text-center">KAWAL CORONA | INDONESIA</h1>
-				<center><button type="button" onclick="redirectHospital()" class="btn btn-warning">Daftar Rumah Sakit Rujukan</button></center>
+				<center><button type="button" onclick="redirectPage(1)" class="btn btn-info">Berita Covid-19</button>
+				<button type="button" onclick="redirectPage(2)" class="btn btn-warning">Daftar Rumah Sakit Rujukan</button></center>
 			</div>
 		</div>
 
@@ -95,7 +96,8 @@
 </div>
 
 <script>
-	function redirectHospital() {
-		window.location = "https://rizkiwahfiudin.my.id/covid19/hospital";
+	function redirectPage($value) {
+		if($value == 1) window.location = "https://rizkiwahfiudin.my.id/covid19/news";
+		if($value == 2) window.location = "https://rizkiwahfiudin.my.id/covid19/hospital";
 	}
 </script>

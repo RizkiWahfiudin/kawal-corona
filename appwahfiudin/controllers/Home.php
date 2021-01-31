@@ -41,6 +41,13 @@ class Home extends WahfiudinController {
 		
 		$this->template->covid19('global',$d);
 	}
+	public function news() {
+		$d['title']= 'Berita Covid-19';
+		$berita= file_get_contents('https://dekontaminasi.com/api/id/covid19/news');
+		$d['berita']= json_decode($berita);
+
+		$this->template->covid19('news',$d);
+	}
 	public function hospital() {
 		$d['title']= 'Daftar Rumah Sakit Rujukan';
 		$rumahsakit= file_get_contents('https://dekontaminasi.com/api/id/covid19/hospitals');
