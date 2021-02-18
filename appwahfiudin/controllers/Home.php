@@ -9,15 +9,25 @@ class Home extends WahfiudinController {
 	}
 	public function index() {
 		$d['title']= 'Beranda';
-		$indonesia= file_get_contents('https://api.kawalcorona.com/indonesia');
-		$d['total_indonesia']= json_decode($indonesia);
+		// $indonesia= file_get_contents('https://api.kawalcorona.com/indonesia');
+		// $d['total_indonesia']= json_decode($indonesia);
 
-		$provinsi= file_get_contents('https://api.kawalcorona.com/indonesia/provinsi');
+		// $provinsi= file_get_contents('https://api.kawalcorona.com/indonesia/provinsi');
+		$provinsi= file_get_contents('https://data.covid19.go.id/public/api/prov.json');
 		$d['total_provinsi']= json_decode($provinsi);
 		
-		$date= date("d-m-Y H:i:s");
+		$date= date("d-m-Y", strtotime($d['total_provinsi']->last_date));
 		$lastupdate= explode("-", $date);
-		$d['last_update']= $lastupdate[0].' '.bulan($lastupdate[1]).' '.$lastupdate[2].' WIB';
+		$d['last_update']= $lastupdate[0].' '.bulan($lastupdate[1]).' '.$lastupdate[2];
+
+		$d['total_kasus'] = 0;
+		$d['total_sembuh'] = 0;
+		$d['total_meninggal'] = 0;
+		for($i=0;$i<34;$i++) {
+			$d['total_kasus'] += $d['total_provinsi']->list_data[$i]->jumlah_kasus;
+			$d['total_sembuh'] += $d['total_provinsi']->list_data[$i]->jumlah_sembuh;
+			$d['total_meninggal'] += $d['total_provinsi']->list_data[$i]->jumlah_meninggal;
+		}
 		
 		$this->template->covid19('home',$d);
 	}
@@ -35,9 +45,8 @@ class Home extends WahfiudinController {
 		$allglobal= file_get_contents('https://api.kawalcorona.com');
 		$d['data_global']= json_decode($allglobal);
 
-		$date= date("d-m-Y H:i:s");
-		$lastupdate= explode("-", $date);
-		$d['last_update']= $lastupdate[0].' '.bulan($lastupdate[1]).' '.$lastupdate[2].' WIB';
+		setlocale(LC_ALL, 'id-ID', 'id_ID');
+  		$d['last_update']= strftime("%d %B %Y");
 		
 		$this->template->covid19('global',$d);
 	}
@@ -54,5 +63,8 @@ class Home extends WahfiudinController {
 		$d['rumah_sakit']= json_decode($rumahsakit);
 
 		$this->template->covid19('hospital',$d);
+	}
+	public function grafik() {
+		$this->template->covid19('grafik');
 	}
 }

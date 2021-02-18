@@ -1,0 +1,91 @@
+{
+	"last_date": "2021-02-01", 
+	"current_data": 100.0, 
+	"missing_data": 0.0, 
+	"tanpa_provinsi": 0, 
+	"list_data": [{
+		"key": "DKI JAKARTA", 
+		"doc_count": 25.092260407524776, 
+		"jumlah_kasus": 273332, 
+		"jumlah_sembuh": 244145, 
+		"jumlah_meninggal": 4312, 
+		"jumlah_dirawat": 24875, 
+		"jenis_kelamin": [
+			{"key": "LAKI-LAKI", "doc_count": 135862}, 
+			{"key": "PEREMPUAN", "doc_count": 133568}
+		], 
+		"kelompok_umur": [
+			{"key": "0-5", "doc_count": 8041, "usia": {"value": 5.0}}, 
+			{"key": "6-18", "doc_count": 22170, "usia": {"value": 18.0}}, 
+			{"key": "19-30", "doc_count": 68773, "usia": {"value": 30.0}}, 
+			{"key": "31-45", "doc_count": 80689, "usia": {"value": 45.0}}, 
+			{"key": "46-59", "doc_count": 57765, "usia": {"value": 59.0}}, 
+			{"key": "\u2265 60", "doc_count": 28942, "usia": {"value": 2003.0}}
+		], 
+		"lokasi": {"lon": 106.83611829006928, "lat": -6.204698991169558}, 
+		"penambahan": {"positif": 3614, "sembuh": 2352, "meninggal": 45}
+	},{
+		"key": "JAWA BARAT", 
+		"doc_count": 14.073338302849148, 
+		"jumlah_kasus": 153302, 
+		"jumlah_sembuh": 120042, 
+		"jumlah_meninggal": 1946, 
+		"jumlah_dirawat": 31314, 
+		"jenis_kelamin": [
+			{"key": "LAKI-LAKI", "doc_count": 73652}, 
+			{"key": "PEREMPUAN", "doc_count": 76143}
+		], 
+		"kelompok_umur": [
+			{"key": "0-5", "doc_count": 5106, "usia": {"value": 5.0}}, 
+			{"key": "6-18", "doc_count": 17640, "usia": {"value": 18.0}}, 
+			{"key": "19-30", "doc_count": 36935, "usia": {"value": 30.0}}, 
+			{"key": "31-45", "doc_count": 43106, "usia": {"value": 45.0}}, 
+			{"key": "46-59", "doc_count": 32767, "usia": {"value": 59.0}}, 
+			{"key": "\u2265 60", "doc_count": 13552, "usia": {"value": 2220.0}}
+		], 
+		"lokasi": {"lon": 107.60370834146391, "lat": -6.920432082789247}, 
+		"penambahan": {"positif": 2966, "sembuh": 2547, "meninggal": 5}
+	},{
+		"key": "JAWA TENGAH", 
+		"doc_count": 11.597179126564756, 
+		"jumlah_kasus": 126329, 
+		"jumlah_sembuh": 82059, 
+		"jumlah_meninggal": 5146, 
+		"jumlah_dirawat": 39124, 
+		"jenis_kelamin": [
+			{"key": "LAKI-LAKI", "doc_count": 49364}, 
+			{"key": "PEREMPUAN", "doc_count": 57187}
+		], 
+		"kelompok_umur": [
+			{"key": "0-5", "doc_count": 3671, "usia": {"value": 5.0}}, 
+			{"key": "6-18", "doc_count": 12333, "usia": {"value": 18.0}}, 
+			{"key": "19-30", "doc_count": 28596, "usia": {"value": 30.0}}, 
+			{"key": "31-45", "doc_count": 34429, "usia": {"value": 45.0}}, 
+			{"key": "46-59", "doc_count": 30712, "usia": {"value": 59.0}}, 
+			{"key": "\u2265 60", "doc_count": 16351, "usia": {"value": 2216.0}}
+		], 
+		"lokasi": {"lon": 110.20111493755839, "lat": -7.259097176704969}, 
+		"penambahan": {"positif": 974, "sembuh": 1988, "meninggal": 124}
+	},{
+		"key": "JAWA TIMUR", 
+		"doc_count": 10.418357342459617, 
+		"jumlah_kasus": 113488, 
+		"jumlah_sembuh": 98188, 
+		"jumlah_meninggal": 7864, 
+		"jumlah_dirawat": 7436, 
+		"jenis_kelamin": [
+			{"key": "LAKI-LAKI", "doc_count": 51005}, 
+			{"key": "PEREMPUAN", "doc_count": 55877}
+		], 
+		"kelompok_umur": [
+			{"key": "0-5", "doc_count": 1930, "usia": {"value": 5.0}}, 
+			{"key": "6-18", "doc_count": 7757, "usia": {"value": 18.0}}, 
+			{"key": "19-30", "doc_count": 22340, "usia": {"value": 30.0}}, 
+			{"key": "31-45", "doc_count": 31259, "usia": {"value": 45.0}}, 
+			{"key": "46-59", "doc_count": 32517, "usia": {"value": 59.0}}, 
+			{"key": "\u2265 60", "doc_count": 16702, "usia": {"value": 1957.0}}
+		], 
+		"lokasi": {"lon": 112.73294137529294, "lat": -7.72334557860008}, 
+		"penambahan": {"positif": 693, "sembuh": 965, "meninggal": 59}
+	}]
+}

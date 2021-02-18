@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
-		<title>Kawal Corona | Rizki Wahfiudin</title>
+		<title>Covid 19 | Rizki Wahfiudin</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   		<link rel="shortcut icon" href="<?php echo base_url('assets/'); ?>data/images/favicon.jpg">
@@ -75,7 +75,7 @@
 							<div class="row align-items-center">
 								<div class="col-lg-12 col-sm-12 mt-3 mt-lg-0 text-center">
 									<br><a href="javascript:;"><img src="<?php echo base_url('assets/uploads/head01.png'); ?>" alt="Ethical Hacker Indonesia" width="172" height="45"></a><br><br>
-									<?php echo date('Y'); ?> Kawal Corona by <a href="https://rizkiwahfiudin.my.id">Rizki Wahfiudin</a>. Source Data from <a href="https://kawalcorona.com" target="_blank">Kawal Corona</a>
+									<?php echo date('Y'); ?> | <a href="https://rizkiwahfiudin.my.id">Rizki Wahfiudin</a>
 								</div>
 							</div>
 						</div>

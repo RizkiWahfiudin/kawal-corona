@@ -54,5 +54,6 @@ $route['tentang']= 'home/tentang';
 $route['default_controller'] = 'home';
 $route['news'] = 'home/news';
 $route['hospital'] = 'home/hospital';
+$route['grafik'] = 'home/grafik';
 $route['404_override'] = 'notfound';
 $route['translate_uri_dashes'] = FALSE;

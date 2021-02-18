@@ -2,9 +2,10 @@
 	<div class="">
 		<div class="jumbotron">
 			<div class="container">
-				<br><h1 class="display-3 text-center">KAWAL CORONA | INDONESIA</h1>
+				<br><h1 class="display-3 text-center">Corona Virus | INDONESIA</h1>
 				<center><button type="button" onclick="redirectPage(1)" class="btn btn-info">Berita Covid-19</button>
-				<button type="button" onclick="redirectPage(2)" class="btn btn-warning">Daftar Rumah Sakit Rujukan</button></center>
+				<button type="button" onclick="redirectPage(2)" class="btn btn-warning">Daftar Rumah Sakit Rujukan</button>
+				<button type="button" onclick="redirectPage(3)" class="btn btn-danger">Grafik</button></center>
 			</div>
 		</div>
 
@@ -15,7 +16,7 @@
 						<div class="d-flex">
 							<div class="text-white">
 								<p class="text-white mb-0">TOTAL POSITIF</p>
-								<h2 class="mb-0 number-font"><?php echo $total_indonesia[0]->positif; ?></h2>
+								<h2 class="mb-0 number-font"><?php echo number_format($total_kasus); ?></h2>
 								<p class="text-white mb-0">ORANG</p>
 							</div>
 							<div class="ml-auto"> <img src="<?php echo base_url('assets/'); ?>uploads/sad-u6e.png" width="50" height="50" alt="Positif"> </div>
@@ -29,7 +30,7 @@
 						<div class="d-flex">
 							<div class="text-white">
 								<p class="text-white mb-0">TOTAL SEMBUH</p>
-								<h2 class="mb-0 number-font"><?php echo $total_indonesia[0]->sembuh; ?></h2>
+								<h2 class="mb-0 number-font"><?php echo number_format($total_sembuh); ?></h2>
 								<p class="text-white mb-0">ORANG</p>
 							</div>
 							<div class="ml-auto"> <img src="<?php echo base_url('assets/'); ?>uploads/happy-ipM.png" width="50" height="50" alt="Positif"> </div>
@@ -43,7 +44,7 @@
 						<div class="d-flex">
 							<div class="text-white">
 								<p class="text-white mb-0">TOTAL MENINGGAL</p>
-								<h2 class="mb-0 number-font"><?php echo $total_indonesia[0]->meninggal; ?></h2>
+								<h2 class="mb-0 number-font"><?php echo number_format($total_meninggal); ?></h2>
 								<p class="text-white mb-0">ORANG</p>
 							</div>
 							<div class="ml-auto"> <img src="<?php echo base_url('assets/'); ?>uploads/emoji-LWx.png" width="50" height="50" alt="Positif"> </div>
@@ -68,20 +69,24 @@
 									<tr>
 										<th class="atasbro">No.</th>
 										<th class="atasbro">Provinsi</th>
+										<th class="atasbro">Presentase (Skala Nasional)</th>
 										<th class="atasbro">Positif</th>
 										<th class="atasbro">Sembuh</th>
 										<th class="atasbro">Meninggal</th>
+										<th class="atasbro">Dirawat</th>
 										<!-- <th></th> -->
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach($total_provinsi as $q){ ?>
+									<?php for($i=0;$i<34;$i++) { ?>
 									<tr>
 										<td></td>
-										<td><?php echo $q->attributes->Provinsi; ?></td>
-										<td><?php echo number_format($q->attributes->Kasus_Posi); ?></td>
-										<td><?php echo number_format($q->attributes->Kasus_Semb); ?></td>
-										<td><?php echo number_format($q->attributes->Kasus_Meni); ?></td>
+										<td><?php echo $total_provinsi->list_data[$i]->key; ?></td>
+										<td><?php echo number_format($total_provinsi->list_data[$i]->doc_count, 2); ?> %</td>
+										<td><?php echo number_format($total_provinsi->list_data[$i]->jumlah_kasus); ?></td>
+										<td><?php echo number_format($total_provinsi->list_data[$i]->jumlah_sembuh); ?></td>
+										<td><?php echo number_format($total_provinsi->list_data[$i]->jumlah_meninggal); ?></td>
+										<td><?php echo number_format($total_provinsi->list_data[$i]->jumlah_dirawat); ?></td>
 										<!-- <td><button type="button" onclick="" class="btn btn-info" data-toggle="modal" data-target="#detail">Detail</button></td> -->
 									</tr>
 									<?php } ?>
@@ -97,7 +102,8 @@
 
 <script>
 	function redirectPage($value) {
-		if($value == 1) window.location = "https://rizkiwahfiudin.my.id/covid19/news";
-		if($value == 2) window.location = "https://rizkiwahfiudin.my.id/covid19/hospital";
+		if($value == 1) window.location = window.location.href+'news';
+		if($value == 2) window.location = window.location.href+'hospital';
+		if($value == 3) window.location = window.location.href+'grafik';
 	}
 </script>
